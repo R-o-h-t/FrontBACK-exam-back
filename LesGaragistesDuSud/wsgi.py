@@ -1,5 +1,5 @@
 """
-WSGI config for MeublesDu31 project.
+WSGI config for LesGaragistesDuSud project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MeublesDu31.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'LesGaragistesDuSud.settings')
 
 application = get_wsgi_application()

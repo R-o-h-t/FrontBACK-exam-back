@@ -1,23 +1,26 @@
-from backend.models import Furniture, Manager, Store
+from backend.models import User, Vehicle, Booking
 from rest_framework import serializers
 
 
-class FurnitureSerializer(serializers.HyperlinkedModelSerializer):
+class UserSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
-        model = Furniture
-        fields = ['id', 'name', 'state', 'price', 'store', 'status']
+        model = User
+        fields = ['id', 'username', 'civil', 'firstname',
+                  'lastname', 'email', 'password', 'role']
 
 
-class StoreSerializer(serializers.HyperlinkedModelSerializer):
-
-    class Meta:
-        model = Store
-        fields = ['id', 'name', 'address', 'manager', 'net_sales']
-
-
-class ManagerSerializer(serializers.HyperlinkedModelSerializer):
+class VehicleSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
-        model = Manager
-        fields = ['id', 'firstname', 'lastname']
+        model = Vehicle
+        fields = ['id', 'brand', 'model', 'year',
+                  'kilometers', 'daily_price', 'available', 'image']
+
+
+class BookingSerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Booking
+        fields = ['id', 'user', 'vehicle', 'date',
+                  'days', 'kilometers', 'total_price']

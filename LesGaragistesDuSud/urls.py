@@ -1,4 +1,4 @@
-"""MeublesDu31 URL Configuration
+"""LesGaragistesDuSud URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -15,19 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from backend.views import FurnitureViewSet, StoreViewSet, ManagerViewSet, FurnitureAPIViewPostStatus
+from backend.views import UserViewSet, VehicleViewSet, BookingViewSet
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register(r'furnitures', FurnitureViewSet)
-router.register(r'stores', StoreViewSet)
-router.register(r'managers', ManagerViewSet)
+
+router.register(r'users', UserViewSet)
+router.register(r'vehicles', VehicleViewSet)
+router.register(r'bookings', BookingViewSet)
+
 
 urlpatterns = [
     path(r'', include(router.urls)),
     # post on /api/furnitures/status/{id}
-    path(r'furnitures/status/<int:id>',
-         FurnitureAPIViewPostStatus.as_view()),
     path(r'admin/', admin.site.urls),
     path(r'api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 

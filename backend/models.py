@@ -1,4 +1,3 @@
-from multiprocessing import managers
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
@@ -47,8 +46,10 @@ class Vehicle(models.Model):
 
 class Booking(models.Model):
     id = models.AutoField(primary_key=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    vehicle = models.ForeignKey(Vehicle, on_delete=models.CASCADE)
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='bookings')
+    vehicle = models.ForeignKey(
+        Vehicle, on_delete=models.CASCADE, related_name='bookings')
     date = models.DateField()
     days = models.IntegerField(null=True, blank=True)
     kilometers = models.FloatField(null=True, blank=True)

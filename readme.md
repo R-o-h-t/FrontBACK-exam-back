@@ -40,3 +40,13 @@ password (hash)
 role : Admin//Driver
 
 """
+
+## SuperUser
+
+- username: admin
+- password: admin
+- email: admin@LesGaragistesDuSud.fr
+
+## Fixtures
+
+`py manage.py loaddata backend/fixtures/data`

@@ -27,8 +27,7 @@ router.register(r'bookings', BookingViewSet)
 
 urlpatterns = [
     path(r'', include(router.urls)),
-    # post on /api/furnitures/status/{id}
     path(r'admin/', admin.site.urls),
-    path(r'api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    # path(r'api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
 ]

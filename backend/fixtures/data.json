@@ -1,0 +1,137 @@
+[
+  {
+    "model": "backend.user",
+    "pk": 1,
+    "fields": {
+      "username": "sjohnson",
+      "civil": "M",
+      "firstname": "Scott",
+      "lastname": "Johnson",
+      "password": "admin",
+      "role": "A"
+    }
+  },
+  {
+    "model": "backend.user",
+    "pk": 2,
+    "fields": {
+      "username": "jsmith",
+      "civil": "M",
+      "firstname": "John",
+      "lastname": "Smith",
+      "password": "user",
+      "role": "U"
+    }
+  },
+  {
+    "model": "backend.user",
+    "pk": 3,
+    "fields": {
+      "username": "jdoe",
+      "civil": "F",
+      "firstname": "Jane",
+      "lastname": "Doe",
+      "password": "user",
+      "role": "U"
+    }
+  },
+  {
+    "model": "backend.vehicle",
+    "pk": 1,
+    "fields": {
+      "brand": "Ford",
+      "model": "Fiesta",
+      "year": 2010,
+      "kilometers": 10000,
+      "daily_price": 50,
+      "available": true,
+      "image": null
+    }
+  },
+  {
+    "model": "backend.vehicle",
+    "pk": 2,
+    "fields": {
+      "brand": "Ford",
+      "model": "Fiesta",
+      "year": 2011,
+      "kilometers": 20000,
+      "daily_price": 60,
+      "available": true,
+      "image": null
+    }
+  },
+  {
+    "model": "backend.vehicle",
+    "pk": 3,
+    "fields": {
+      "brand": "Ford",
+      "model": "Fiesta",
+      "year": 2012,
+      "kilometers": 30000,
+      "daily_price": 70,
+      "available": true,
+      "image": null
+    }
+  },
+  {
+    "model": "backend.booking",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "vehicle": 1,
+      "date": "2022-01-01",
+      "days": 1,
+      "total_price": 50,
+      "kilometers": 500
+    }
+  },
+  {
+    "model": "backend.booking",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "vehicle": 2,
+      "date": "2022-01-02",
+      "days": 2,
+      "total_price": 120,
+      "kilometers": 1000
+    }
+  },
+  {
+    "model": "backend.booking",
+    "pk": 3,
+    "fields": {
+      "user": 2,
+      "vehicle": 1,
+      "date": "2022-01-03",
+      "days": 3,
+      "total_price": 150,
+      "kilometers": 1500
+    }
+  },
+  {
+    "model": "backend.booking",
+    "pk": 4,
+    "fields": {
+      "user": 2,
+      "vehicle": 2,
+      "date": "2022-01-04",
+      "days": 4,
+      "total_price": 240,
+      "kilometers": 2000
+    }
+  },
+  {
+    "model": "backend.booking",
+    "pk": 5,
+    "fields": {
+      "user": 3,
+      "vehicle": 3,
+      "date": "2022-01-01",
+      "days": 5,
+      "total_price": 350,
+      "kilometers": 2500
+    }
+  }
+]

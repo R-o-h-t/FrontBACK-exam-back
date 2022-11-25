@@ -7,7 +7,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'username', 'civil', 'firstname',
-                  'lastname', 'email', 'password', 'role']
+                  'lastname',  'password', 'role']
 
 
 class VehicleSerializer(serializers.HyperlinkedModelSerializer):

@@ -13,9 +13,9 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     filter_backends = (filters.DjangoFilterBackend, rest_filters.SearchFilter)
     filterset_fields = ('id', 'username', 'civil', 'firstname',
-                        'lastname', 'email', 'password', 'role')
+                        'lastname',  'password', 'role')
     search_fields = ('id', 'username', 'civil', 'firstname',
-                     'lastname', 'email', 'password', 'role')
+                     'lastname', 'password', 'role')
 
 
 class VehicleViewSet(viewsets.ModelViewSet):
